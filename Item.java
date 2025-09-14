@@ -49,11 +49,11 @@ class ValueCalculator {
             return container.getItem().getValue();
         }
 
-        int sumOfObjects = 0;
-        for (Container subContainer : container.getContainers()) {
-            sumOfObjects += calculateTotalValue(subContainer); // recursion here
+        int sum = 0;
+        for (Container nestedContainer : container.getContainers()) {
+            sum += calculateTotalValue(nestedContainer); // recursion here
         }
-        return sumOfObjects;
+        return sum;
     }
 //    public static void main(String[] args) {
 //        // Create individual items
