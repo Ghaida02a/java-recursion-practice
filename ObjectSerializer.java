@@ -28,7 +28,7 @@ class Person {
 public class ObjectSerializer {
     public String serialize(Person person) {
         if(person == null){
-            return "There is no person";
+            return null;
         }
 
         return "{name: " + person.getName() +
